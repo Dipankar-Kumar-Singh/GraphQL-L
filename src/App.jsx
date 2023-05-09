@@ -8,6 +8,9 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+const Data = { 
+  name :" sdfsf" 
+}
 
 function App() {
   const [count, setCount] = useState(0)
