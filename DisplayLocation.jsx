@@ -2,7 +2,6 @@ import { useQuery, gql } from '@apollo/client';
 
 export function DisplayLocation( ) {
 	
-    
     const GET_LOCATIONS = gql`
 		query GetLocations {
 			locations {
@@ -14,11 +13,8 @@ export function DisplayLocation( ) {
 		}
 	`;
 
-	console.log(GET_LOCATIONS) ;
-
 	const { loading, error, data } = useQuery(GET_LOCATIONS);
-
-	console.dir(data);
+    // data is a Array of Object whci desired property on location { _ _ _ _ } 
 
 	if (loading) return <p>Loading...</p>;
 	if (error) return <p>Error : {error.message}</p>;
